@@ -1,0 +1,45 @@
+p {
+  color: #37a329;
+  font-size: 20px;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+.primeiroParagrafo {
+  color: #f2f;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.container {
+  padding: 16px;
+  margin: 4px;
+  /* border: 2px; */
+  border-color: cadetblue;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.primeiraDiv {
+  padding: 16px;
+  background-color: aquamarine;
+  text-align: center;
+}
+
+.segundaDiv {
+  padding: 16px;
+  background-color: coral;
+  text-align: center;
+}
+
+.containerDivs {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  height: 200px;
+  background-color: cornflowerblue;
+  justify-content: center;
+  align-items: center;
+}
