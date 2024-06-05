@@ -1,10 +1,12 @@
 import "./App.css";
-import ToDoList from "./pages/ToDoList";
+import SimulateApi from "./components/SimulateApi";
+// import ToDoList from "./pages/ToDoList";
+// import UseEffect from "./pages/UseEffect";
 
 function App() {
   return (
     <div>
-      <ToDoList pageTitle="Lista de tarefas" />
+      <SimulateApi />
     </div>
   );
 }
