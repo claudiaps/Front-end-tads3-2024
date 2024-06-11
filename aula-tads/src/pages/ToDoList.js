@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "./ToDoList.css";
+import { useNavigate } from "react-router-dom";
 
 const ListItem = ({ toDoItem }) => {
   return (
@@ -14,6 +15,7 @@ const ListItem = ({ toDoItem }) => {
 };
 
 const ToDoList = ({ pageTitle }) => {
+  const navigate = useNavigate();
   const [toDoList, setToDoList] = useState([]);
   const [inputValue, setInputValue] = useState();
 
@@ -52,6 +54,7 @@ const ToDoList = ({ pageTitle }) => {
           <ListItem toDoItem={toDoItem} />
         ))}
       </div>
+      <button onClick={() => navigate(-1)}>Voltar</button>
     </div>
   );
 };

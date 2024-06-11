@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./SimulateApi.css";
+import { Link } from "react-router-dom";
 
 // simulação de objeto retornado do backend
 const infoCampoMourao = {
@@ -29,11 +30,15 @@ const SimulateApi = () => {
 
   return (
     <div className="container">
+      <Link to="/todolist">Ir para a página toDoList</Link>
       {info ? (
         <div>
           <h3>{info.nome}</h3>
           <h4>{info.dataCriacao}</h4>
           <h4>{info.qtdHabitantes}</h4>
+          {info.universidades.map((universidade) => (
+            <div>{universidade}</div>
+          ))}
         </div>
       ) : (
         <div>Carregando...</div>
