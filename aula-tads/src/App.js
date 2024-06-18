@@ -5,7 +5,8 @@ import ToDoList from "./pages/ToDoList";
 import Home from "./pages/Home";
 import List from "./pages/List";
 import Profile from "./pages/Profile";
-// import UseEffect from "./pages/UseEffect";
+import { ChakraProvider } from "@chakra-ui/react";
+import SearchPokemon from "./pages/SearchPokemon";
 
 const router = createBrowserRouter([
   {
@@ -20,10 +21,18 @@ const router = createBrowserRouter([
     path: "/profile",
     element: <Profile />,
   },
+  {
+    path: "/search",
+    element: <SearchPokemon />,
+  },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <ChakraProvider>
+      <RouterProvider router={router} />
+    </ChakraProvider>
+  );
 }
 
 export default App;
