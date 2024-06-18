@@ -7,11 +7,16 @@ import List from "./pages/List";
 import Profile from "./pages/Profile";
 import { ChakraProvider } from "@chakra-ui/react";
 import SearchPokemon from "./pages/SearchPokemon";
+import CreatePost from "./pages/CreatePost";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/post",
+    element: <CreatePost />,
   },
   {
     path: "/list",
